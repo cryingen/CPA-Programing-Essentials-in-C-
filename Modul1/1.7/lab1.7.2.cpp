@@ -10,12 +10,12 @@ int main()
     cin>>a1;
     cout<<"Please, input second value"<<endl;
     cin>>a2;
-    bool fuck;
+    bool flag;
     float diff=1/(float)a1-1/(float)a2;
     if(diff < 0)
-	    fuck=-EPSILON > -diff;
+	flag=-EPSILON > -diff;
     else
-	    fuck=diff < EPSILON;
+	flag=diff < EPSILON;
     if(fuck)
         cout<<"This numbers are equal by "<<fixed<<setprecision(7)<<EPSILON;
     else 
