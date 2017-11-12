@@ -8,14 +8,10 @@ struct Time
 int main(void) {
     Time first, second;
     int hours, minutes;
-    cout << "Input 1st value hour: ";
-    cin >> first.hour;
-    cout << "Input 1st value minutes: ";
-    cin >> first.minute;
-    cout << "Input 2nd value hour: ";
-    cin >> second.hour;
-    cout << "Input 2nd value minutes: ";
-    cin >> second.minute;
+    cout << "Input 1st value hours and minutes: ";
+    cin >> first.hour >> first.minute;
+    cout << "Input 2nd value hours and minutes: ";
+    cin >> second.hour >> second.minute;
     if(first.hour > 23 || first.hour < 0 || first.minute > 60 || first.minute < 0 || second.hour > 23 || second.hour < 0 || second.minute > 60 || second.minute < 0 
     || first.hour > second.hour || (first.hour > second.hour && first.minute > second.minute))
         cout << "Wrong time!";
