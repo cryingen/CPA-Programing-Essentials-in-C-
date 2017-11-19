@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 void increment(int& a, int b = 1)
 {
     a += b;
