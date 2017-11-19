@@ -1,11 +1,11 @@
 #include <iostream>
-using namespace std;
+
 int main(void) {
     int N;
-    cout << "Input N, please: ";
-    cin >> N;
+    std::cout << "Input N, please: ";
+    std::cin >> N;
     int sum = 0;
     for (int i = 1; i <= N; i++)
         sum += i;
-    cout <<"The sum of first N natural numbers: " << sum;    
+    std::cout <<"The sum of first N natural numbers: " << sum;    
 }

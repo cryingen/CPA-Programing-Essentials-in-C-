@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+
 int main(void) {
 	double matrix[][4] = { { 1, 2, 3, 4 }, { 2, 2, 3, 1 }, { 3, 3, 3, 2 }, { 4, 1, 2, 4 } };
     int side = sizeof(matrix[0]) / sizeof(matrix[0][0]);
@@ -16,8 +16,8 @@ int main(void) {
         }   
     }
     if(issymmetric)
-        cout << "The matrix is symmetric" << endl;
+        std::cout << "The matrix is symmetric" << std::endl;
     else
-        cout << "The matrix is not symmetric" << endl;
+        std::cout << "The matrix is not symmetric" << std::endl;
     return 0;
     }

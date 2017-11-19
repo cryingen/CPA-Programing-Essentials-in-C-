@@ -1,13 +1,13 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-using namespace std;
+
 int main(void) {
     int maxball, ballsno;
-    cout << "Max ball number? ";
-    cin >> maxball;
-    cout << "How many balls? ";
-    cin >> ballsno;
+    std::cout << "Max ball number? ";
+    std::cin >> maxball;
+    std::cout << "How many balls? ";
+    std::cin >> ballsno;
     srand(time(NULL));
     int *array = new int[ballsno];
     int val;//get this value by rand
@@ -30,7 +30,7 @@ int main(void) {
         array[i] = val;
     }
     for(int i = 0; i < ballsno; i++)
-        cout << array[i] << "   ";
+        std::cout << array[i] << "   ";
     delete [] array;
     return 0;
     }

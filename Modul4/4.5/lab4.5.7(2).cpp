@@ -1,21 +1,21 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string>
-using namespace std;
+
 int main()
 {
-    string text, from, to;
-    cout << "Input original text: ";
-    getline(cin, text);
-    cout << "Input the word you want to replace: ";
-    getline(cin, from);
-    cout << "Input the wrod you want to replace with: ";
-    getline(cin, to);
+   std::string text, from, to;
+    std::cout << "Input original text: ";
+    getline(std::cin, text);
+    std::cout << "Input the word you want to replace: ";
+    getline(std::cin, from);
+    std::cout << "Input the wrod you want to replace with: ";
+    getline(std::cin, to);
     int pos = text.find(from);
     while (pos != -1)
     { 
         text.replace(pos, from.size(), to);
         pos = text.find(from);
     }
-    cout << text << endl;
+    std::cout << text << std::endl;
     return 0;
 }

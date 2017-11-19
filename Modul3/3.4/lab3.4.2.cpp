@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+
 bool isLeap(int year) {
 	if ((year % 4 != 0) && (year % 400 != 0))
 		return false;
@@ -14,8 +14,8 @@ int monthLength(int year, int month) {
 int main(void) {
 	for (int yr = 2000; yr < 2002; yr++) {
 		for (int m = 1; m <= 12; m++)
-			cout << monthLength(yr, m) << " ";
-		cout << endl;
+			std::cout << monthLength(yr, m) << " ";
+		std::cout << std::endl;
 	}
 	return 0;
 }

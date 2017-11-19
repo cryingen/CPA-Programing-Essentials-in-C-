@@ -1,12 +1,12 @@
 #include <iostream>
-using namespace std;
+
 int main(void) {
     int c, steps = 0;//counter for steps in loop
-    cout << "Input the int number more then 0: ";
-    cin >> c;
+    std::cout << "Input the int number more then 0: ";
+    std::cin >> c;
     if(c <= 0)
     {
-        cout << "Value's wrong";
+        std::cout << "Value's wrong";
         return 1;
     }
     while(c != 1)
@@ -16,8 +16,8 @@ int main(void) {
         else
             c = c * 3 + 1;
         steps++;
-        cout << c << endl;
+        std::cout << c << std::endl;
     }
-    cout << "Steps: " << steps;
+    std::cout << "Steps: " << steps;
     return 0;
     }

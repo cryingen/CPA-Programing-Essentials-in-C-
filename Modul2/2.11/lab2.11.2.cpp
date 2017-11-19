@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+
 struct Time
 {
     int hour;
@@ -8,13 +8,13 @@ struct Time
 int main(void) {
     Time first, second;
     int hours, minutes;
-    cout << "Input 1st value hours and minutes: ";
-    cin >> first.hour >> first.minute;
-    cout << "Input 2nd value hours and minutes: ";
-    cin >> second.hour >> second.minute;
+    std::cout << "Input 1st value hours and minutes: ";
+    std::cin >> first.hour >> first.minute;
+    std::cout << "Input 2nd value hours and minutes: ";
+    std::cin >> second.hour >> second.minute;
     if(first.hour > 23 || first.hour < 0 || first.minute > 60 || first.minute < 0 || second.hour > 23 || second.hour < 0 || second.minute > 60 || second.minute < 0 
     || first.hour > second.hour || (first.hour > second.hour && first.minute > second.minute))
-        cout << "Wrong time!";
+        std::cout << "Wrong time!";
     else
     {
         if(first.minute > second.minute)
@@ -26,6 +26,6 @@ int main(void) {
             minutes = second.minute - first.minute;
         hours = second.hour - first.hour;
     }
-    cout << hours << ":" << minutes;
+    std::cout << hours << ":" << minutes;
     return 0;
 }

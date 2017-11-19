@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+
 struct Date {
 int year;
 int month;
@@ -21,12 +21,12 @@ int dayOfYear(Date date) {
 }
 int main(void) {
     Date d;
-    cout << "Enter year: ";
-    cin >> d.year;
-    cout << "Enter month: ";
-    cin >> d.month;
-    cout << "Enter day: ";
-    cin >> d.day;
-    cout << dayOfYear(d) << endl;
+    std::cout << "Enter year: ";
+    std::cin >> d.year;
+    std::cout << "Enter month: ";
+    std::cin >> d.month;
+    std::cout << "Enter day: ";
+    std::cin >> d.day;
+    std::cout << dayOfYear(d) << std::endl;
     return 0;
     }

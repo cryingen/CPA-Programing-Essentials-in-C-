@@ -1,17 +1,17 @@
 #include <iostream>
-using namespace std;
+
 int main()
 {   
     int value;
     int bitarray[16];
     bool result = true;
-    cout << "Input decimal value: ";
-    cin >> value;
-    cout << "This value in binary: ";
+    std::cout << "Input decimal value: ";
+    std::cin >> value;
+    std::cout << "This value in binary: ";
     for(int i = 0; i < 16; i++)
     {
         bitarray[15 - i] = value % 2;
-        cout << bitarray[15 - i];
+        std::cout << bitarray[15 - i];
         value /= 2;
     }
     for(int i = 0; i < 16; i++)
@@ -23,8 +23,8 @@ int main()
         }
     }
     if(result)
-        cout << " is a bitwise palindrome";
+        std::cout << " is a bitwise palindrome";
     else
-        cout << " isn't a bitwise palindrome";
+        std::cout << " isn't a bitwise palindrome";
     return 0;
 }

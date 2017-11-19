@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+
 int main(void) {
     int matrix[10][10] = { };
     int *pointer = &matrix[0][0];
@@ -15,10 +15,10 @@ int main(void) {
     {
 	    for(int j = 0; j < 10; j++) 
 	    {
-		    cout.width(4);
-		    cout << matrix[i][j];
+		    std::cout.width(4);
+		    std::cout << matrix[i][j];
 	    }
-	    cout << endl;
+	    std::cout << std::endl;
     }
     return 0;
     }

@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+
 struct Date {
     int year;
     int month;
@@ -62,10 +62,10 @@ int daysBetween(Date since, Date till) {
 int main(void) {
     Date since;
     Date till;
-    cout << "Enter year month day since: "<< endl;
-    cin >> since.year >> since.month >> since.day;
-    cout << "Enter year month day till: "<< endl;
-    cin >> till.year >> till.month >> till.day;
-    cout << daysBetween(since, till) << endl;
+    std::cout << "Enter year month day since: "<< std::endl;
+    std::cin >> since.year >> since.month >> since.day;
+    std::cout << "Enter year month day till: "<< std::endl;
+    std::cin >> till.year >> till.month >> till.day;
+    std::cout << daysBetween(since, till) << std::endl;
     return 0;
 }

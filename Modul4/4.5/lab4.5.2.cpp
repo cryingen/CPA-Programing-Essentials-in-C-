@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-using namespace std;
+
 bool StrToInt(const std::string& str, int& result)
 {
     std::string::const_iterator i = str.begin();
@@ -28,23 +28,23 @@ bool StrToInt(const std::string& str, int& result)
     return true;
 }
 int main(void) {
-    string s;
-    cout << "Input IP please(format: 1.9.3.5)" << endl;
-    getline(cin,s);
-    vector<string> parts = vector<string>();
-    string temp;
+    std::string s;
+    std::cout << "Input IP please(format: 1.9.3.5)" << std::endl;
+    getline(std::cin,s);
+    std::vector<std::string> parts = std::vector<std::string>();
+    std::string temp;
     int a = 0;
-    while (s.find_first_of('.') != string::npos)
+    while (s.find_first_of('.') != std::string::npos)
     {
         temp = s.substr(0, s.find_first_of("."));
         if (temp.length() > 3)
         {
-            cout << "Too many characters in a part";
+            std::cout << "Too many characters in a part";
             return 0;
         }
         if (!StrToInt(temp, a))
         {
-            cout << "Only digits and dots allowed";
+            std::cout << "Only digits and dots allowed";
             return 0;
         }
         parts.push_back(temp);
@@ -53,18 +53,18 @@ int main(void) {
     parts.push_back(s);
     if(parts.size() != 4)
     {
-		cout << "Incorrect parts count.";
+		std::cout << "Incorrect parts count.";
 		return 0;
 	}
 	for (int i = 0; i < parts.size(); i++)
     {
         StrToInt(parts[i], a);
-        if(a > 255 )
+        if(a > 255)
         {
-            cout << "Too big a value of a part";
+            std::cout << "Too big a value of a part";
             return 0;
         }
     }
-    cout << "Correct IP";
+    std::cout << "Correct IP";
 	return 0;
 }

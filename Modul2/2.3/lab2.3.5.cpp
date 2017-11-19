@@ -1,28 +1,28 @@
 #include <iostream>
-using namespace std;
+
 int main(void) {
     int side;
-    cout << "Input the square's side long (it must be int, from 1 to 177): ";
-    cin >> side;
+    std::cout << "Input the square's side long (it must be int, from 1 to 177): ";
+    std::cin >> side;
     if((side <= 0) || (side > 177))
     {
-        cout << "Value's wrong";
+        std::cout << "Value's wrong";
         return 1;
     }
-    cout << '+';
+    std::cout << '+';
     for(int i = 0; i < side; i++)
-        cout << '-'; 
-    cout << '+' << endl;
+        std::cout << '-'; 
+    std::cout << '+' << std::endl;
     for(int i = 0; i < side; i++) 
     {  
-        cout << '|';
+        std::cout << '|';
         for(int j = 0; j < side; j++)
-            cout << ' ';
-        cout << '|' << endl;
+            std::cout << ' ';
+        std::cout << '|' << std::endl;
     } 
-    cout << '+';
+    std::cout << '+';
     for(int i = 0; i < side; i++)
-        cout << '-';
-    cout << '+' << endl;
+        std::cout << '-';
+    std::cout << '+' << std::endl;
     return 0; 
     }

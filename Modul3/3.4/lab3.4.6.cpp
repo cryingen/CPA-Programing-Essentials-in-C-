@@ -1,6 +1,6 @@
-﻿#include <iostream>
+#include <iostream>
 #include <cmath>
-using namespace std;
+
 bool isPrime(int n){
 	if(n == 1)
 		return false;
@@ -12,7 +12,7 @@ bool isPrime(int n){
 int main(void) {
 	for(int i = 1; i <= 21; i++)
 	if(isPrime(i))
-		cout << i << " ";
-	cout << endl;
+		std::cout << i << " ";
+	std::cout << std::endl;
 	return 0;
 }

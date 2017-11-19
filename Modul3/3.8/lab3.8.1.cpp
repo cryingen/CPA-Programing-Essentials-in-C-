@@ -1,7 +1,5 @@
 #include <iostream>
 #include <cmath>
-using namespace std;
-
 void increment(int& a, int b = 1)
 {
     a += b;
@@ -26,6 +24,6 @@ int main(void) {
         increment(intvar,i);
         increment(floatvar);
     }
-    cout << intvar * floatvar << endl;
+    std::cout << intvar * floatvar << std::endl;
     return 0;
 }

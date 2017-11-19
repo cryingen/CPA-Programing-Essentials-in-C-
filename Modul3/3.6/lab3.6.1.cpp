@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+
 
 void increment(int& a, int b = 1)
 {
@@ -13,6 +13,6 @@ int main(void) {
     	increment(var);
     else
     	increment(var,i);
-    cout << var << endl;
+    std::cout << var << std::endl;
     return 0;
 }

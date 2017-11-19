@@ -1,9 +1,8 @@
 #include <iostream>
-using namespace std;
 int main(void) { 
     int year;
-    cout << "Enter a year, please: ";
-    cin >> year;
+    std::cout << "Enter a year, please: ";
+    std::cin >> year;
     int a, b, c, d, e;
     a = year % 19;
     b = year % 4;
@@ -12,12 +11,12 @@ int main(void) {
     e = (2 * b + 4 * c + 6 * d + 5) % 7;
     if (d + e < 10)
     {
-        cout << "March "; 
-        cout << d + e + 22  << endl;
+        std::cout << "March "; 
+        std::cout << d + e + 22  << std::endl;
     }
     else 
     {
-        cout << "April ";
-        cout << (d + e - 9) << endl;
+        std::cout << "April ";
+        std::cout << (d + e - 9) << std::endl;
     }
 }

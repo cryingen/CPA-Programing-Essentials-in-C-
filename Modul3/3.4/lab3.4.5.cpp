@@ -1,6 +1,6 @@
 #include <iostream>
 #include <ctime>
-using namespace std;
+
 struct Date {
     int year;
     int month;
@@ -18,6 +18,6 @@ Date today(void) {
 
 int main(void) {
     Date t = today();
-    cout << t.year << "-" << t.month << "-" << t.day << endl;
+    std::cout << t.year << "-" << t.month << "-" << t.day << std::endl;
     return 0;
 }

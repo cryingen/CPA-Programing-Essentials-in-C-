@@ -1,20 +1,20 @@
 #include <iostream>
-using namespace std;
 int main(void) {
     int year, month, day;
-    cout << "Input year(it must be more then 0): ";
-    cin >> year;
-    cout << "Input month(it must be from 1 to 12): ";
-    cin >> month;
-    cout << "Input day(it must be from 1 to 31-28(it depends)): ";
-    cin >> day;
+    std::cout << "Input year(it must be more then 0): ";
+    std::cin >> year;
+    std::cout << "Input month(it must be from 1 to 12): ";
+    std::cin >> month;
+    std::cout << "Input day(it must be from 1 to 31-28(it depends)): ";
+    std::cin >> day;
     if((year < 1900) || (month > 12) || (month < 1) || (day > 31) || (day < 1))
     {
-        cout << "One of the values is wrong";
+        std::cout << "One of the values is wrong";
         return 1;
     }
     month -= 2;
-    if(month <= 0) {
+    if(month <= 0)
+    {
         month += 12;
         year -= 1;
     }
@@ -24,6 +24,6 @@ int main(void) {
     month += year / 4;
     month -= (year / 100);
     month += (year / 400);
-    cout << month % 7;
+    std::cout << month % 7;
     return 0;
     }

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <math.h>
-using namespace std;
+
 bool is_close(double a, double b, double tolerance){
     if(fabs(a - b) < tolerance) 
         return true;
@@ -8,25 +8,25 @@ bool is_close(double a, double b, double tolerance){
 }
 int main(void) {
     if (0.3 == 3 * 0.1)
-        cout << "The numbers are equal";
+        std::cout << "The numbers are equal";
     else 
-        cout << "The numbers are not equal";
-    cout << endl;
+        std::cout << "The numbers are not equal";
+    std::cout << std::endl;
     if (is_close(0.3, 3 * 0.1, 0.00000001))
-        cout << "The numbers are close enough";
+        std::cout << "The numbers are close enough";
     else
-        cout << "The numbers are not close enough";
-    cout << endl;
+        std::cout << "The numbers are not close enough";
+    std::cout << std::endl;
     // this should work regardless of the argument order
     if (is_close(3 * 0.1, 0.3, 0.00000001))
-        cout << "The numbers are still close enough";
+        std::cout << "The numbers are still close enough";
     else
-        cout << "The numbers are not close enough";
-    cout << endl;
+        std::cout << "The numbers are not close enough";
+    std::cout << std::endl;
     if (is_close(3 * 0.1, 0.31, 0.00000001))
-        cout << "The numbers are still close enough";
+        std::cout << "The numbers are still close enough";
     else
-        cout << "The numbers are not close enough";
-    cout << endl;
+        std::cout << "The numbers are not close enough";
+    std::cout << std::endl;
     return 0;
     }

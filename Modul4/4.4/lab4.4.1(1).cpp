@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
-using namespace std; 
+ 
 int main(void) { 
-    string str;
-    cout << "Input the string please: " << endl;
-    getline(cin, str);
+    std::string str;
+    std::cout << "Input thestd::string please: " << std::endl;
+    getline(std::cin, str);
     int *arr = new int[26];
     int inx;
     if(str[0] >= 65 && str[0] <= 90)
@@ -20,14 +20,14 @@ int main(void) {
         if(arr[i] == 0)
         {
         	isPangram = false;
-        	cout << "Not pangram\n";
+        	std::cout << "Not pangram\n";
         	break;
         }
     }
     if(isPangram)
-		cout<<"Pangram\n";
-	for(int i = 0; i < 26; i++)
-        cout << (char)(i + 97) << " - " << arr[i] << endl;
+	std::cout << "Pangram\n";
+    for(int i = 0; i < 26; i++)
+        std::cout << (char)(i + 97) << " - " << arr[i] << std::endl;
     delete[] arr;
     return 0;
 }
