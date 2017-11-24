@@ -2,12 +2,11 @@
 #include <cctype>
 #include <algorithm>
 #include <iostream>
-using namespace std;
 int main()
 {
 	std::string sentence, sub;
 	int next = 0;
-        std::cout << "Input the sentence with '_' before and after word to get spaces after each letter or '*' to get word in uppercase" << endl;
+        std::cout << "Input the sentence with '_' before and after word to get spaces after each letter or '*' to get word in uppercase" << std::endl;
 	std::getline(std::cin, sentence);
 
 	for (int k = 0; k < sentence.length(); k++) //parse *
@@ -39,6 +38,6 @@ int main()
 			sentence.erase(i, 1);
 		}
 	}
-	std::cout << sentence << "\n";
+	std::cout << sentence << std::endl;
 	return 0;
 }
