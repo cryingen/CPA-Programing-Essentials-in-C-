@@ -37,18 +37,18 @@ bool IPAddressChecked::SetIP(string ip)
 
 bool IPAddressChecked::CheckIP(string ip)
 {
-	std::string mess = "", part[4];
+	string mess = "", part[4];
 	int dotindx = 0, k = 0;//next dot and current dot indexes
 	for (int i = 0; i < sizeof(part) / sizeof(part[0]); i++)//split input ip on parts
 	{
-		if (dotindx == std::string::npos)
+		if (dotindx == string::npos)
 			return false;
 		dotindx = ip.find(".", k);
 		part[i] = ip.substr(k, dotindx - k);
 		k = dotindx + 1;
 		if (part[i].length() > 3 || atof(part[i].c_str()) > 255)
 			return false;
-		if (i == 3 && dotindx != std::string::npos)
+		if (i == 3 && dotindx != string::npos)
 			return false;
 		if (atof(part[i].c_str()) == 0 && part[i].length() > 1 || part[i].empty())
 			return false;
@@ -84,11 +84,27 @@ int main(void) {
 	string a[5];
 	IPAddressChecked ad1[3], ad2[3];
 	for (int i = 0; i < sizeof(a) / sizeof(a[0]); i++)
+	{
 		getline(cin, a[i]);
+		for (int j = 0; j < i; j++)
+			if (a[i] == a[j])
+			{
+				cout << "This IP already exists" << endl;
+				return 1;
+			}
+	}
 	for (int i = 0; i < sizeof(ad1) / sizeof(ad1[0]); i++)
-		ad1[i].SetIP(a[i]);
-	for (int i = 0; i < sizeof(ad1) / sizeof(ad1[0]); i++)
-		ad2[i].SetIP(a[i+2]);
+		if (ad1[i].SetIP(a[i]) == false)
+		{
+			cout << "IP is invalid or it's already exists" << endl;
+			return 1;
+		}
+	for (int i = 0; i < sizeof(ad2) / sizeof(ad2[0]); i++)
+		if (ad2[i].SetIP(a[i + 2]) == false)
+		{
+			cout << "IP is invalid or it's already exists" << endl;
+			return 1;
+		}
 	Network n1(ad1), n2(ad2);
 	cout << "Network 1" << endl;
 	n1.PrintNetwork();
