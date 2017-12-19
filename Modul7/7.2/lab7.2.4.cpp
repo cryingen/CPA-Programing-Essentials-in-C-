@@ -6,10 +6,7 @@ using namespace std;
 class invalid_area_value : public invalid_argument
 {
 public:
-	explicit invalid_area_value(const string& a) : invalid_argument(a) 
-	{
-		cout << a << endl;
-	};
+	explicit invalid_area_value(const string& what_arg) : invalid_argument(what_arg);
 };
 float square_area(float a) throw (invalid_area_value)
 {
