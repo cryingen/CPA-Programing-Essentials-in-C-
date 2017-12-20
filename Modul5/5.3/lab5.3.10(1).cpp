@@ -1,5 +1,6 @@
 #include <iostream>
-class FlightBooking {
+class FlightBooking
+{
     public:
         FlightBooking(int id, int capacity, int reserved);
         void printStatus();
